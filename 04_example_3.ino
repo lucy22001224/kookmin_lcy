@@ -1,24 +1,33 @@
-#define PIN_LED 13
-unsigned int count, toggle;
+int red = 7;
 
-void setup() {
-  pinMode(PIN_LED, OUTPUT);
-  Serial.begin(115200); //Initialize serial port
-  while (!Serial){
-    ;//Wait for serial port to connect.
-  }
-   Serial.println("Hello World");
-   count = toggle = 0;
-   digitalWrite(PIN_LED, toggle); // turn off LED.
-}
-
-void loop() {
-  Serial.println(++count);
-  toggle = toggle_state(toggle); //toggle LED value.
-  digitalWrite(PIN_LED, toggle); // update LED statue.
+void setup() 
+{
+  pinMode(red, OUTPUT);
   delay(1000);
+  digitalWrite(red, 1);
+  delay(100);
+  digitalWrite(red, 0);
+  delay(100);
+  digitalWrite(red, 1);
+  delay(100);
+  digitalWrite(red, 0);
+  delay(100);
+  digitalWrite(red, 1);
+  delay(100);
+  digitalWrite(red, 0);
+  delay(100);
+  digitalWrite(red, 1);
+  delay(100);
+  digitalWrite(red, 0);
+  delay(100);
+  digitalWrite(red, 1);
+  delay(100);
+  digitalWrite(red, 0);
+  delay(100);
+  digitalWrite(red, 1);
 }
 
-int toggle_state(int toggle){
-  return toggle;
+void loop() 
+{
+  while(1){}
 }
